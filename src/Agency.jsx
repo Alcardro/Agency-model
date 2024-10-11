@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import birdImage from './assets/bird.avif';
+import splash1 from './assets/splash1.mp4';
 
 
 
@@ -43,7 +44,7 @@ function Agency(){
                         className={`splash-video ${activeVideo >= 1 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="###" type="video/mp4" />
+                        <source src={splash1} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
