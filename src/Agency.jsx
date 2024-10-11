@@ -69,7 +69,7 @@ function Agency(){
     return (
         <div>
             <h1>Agencia de modelaje</h1>
-            <img src="./assets/cat.jpg" alt="" />  
+            <img src="/assets/cat.jpg" alt="" />  
         </div>
     );
 }
