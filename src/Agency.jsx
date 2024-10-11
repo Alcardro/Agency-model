@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 
+
 function Agency(){
 
     const [loading, setLoading] = useState(true);
@@ -69,7 +70,7 @@ function Agency(){
     return (
         <div>
             <h1>Agencia de modelaje</h1>
-            <img src="./assets/bird.avif" alt="" />  
+            <img src=  {import.meta.env.BASE_URL +"/assets/bird.avif"} alt="" />  
         </div>
     );
 }
