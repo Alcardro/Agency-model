@@ -1,40 +1,47 @@
+import React, { useEffect, useState, useRef } from 'react';
 
-import React, { useEffect, useState } from 'react';
-import birdImage from './assets/bird.avif';
 import splash1 from './assets/splash1.mp4';
 import splash2 from './assets/splash2.mp4';
 import splash3 from './assets/splash3.mp4';
 import splash4 from './assets/splash4.mp4';
+import PrincipalAgency from './PrincipalAgency';
 
-
-
-function Agency(){
-
+function Agency() {
     const [loading, setLoading] = useState(true);
     const [fadingOut, setFadingOut] = useState(false);
     const [activeVideo, setActiveVideo] = useState(0);
+    const videoRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
     useEffect(() => {
-        // Iniciar el efecto de fade-in al cargar el componente
         const fadeInTimeout = setTimeout(() => {
-            setLoading(true); // Comienza la carga
+            setLoading(true);
         }, 0);
 
         const intervals = [
-            setTimeout(() => setActiveVideo(1), 0),    // El primer video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(2), 2000),   // El segundo video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(3), 4000),   // El tercer video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(4), 6000),   // El cuarto video aparece después de 0 segundos
+            setTimeout(() => setActiveVideo(1), 0),
             setTimeout(() => {
-                setFadingOut(true); // Inicia el desvanecimiento después de 7 segundos
-            }, 8000),  
+                if (videoRefs[0].current) videoRefs[0].current.pause();
+                setActiveVideo(2);
+            }, 2000),
             setTimeout(() => {
-                setLoading(false); // Después de 9 segundos, se oculta el splash screen
-            }, 10000)   
+                if (videoRefs[1].current) videoRefs[1].current.pause();
+                setActiveVideo(3);
+            }, 4000),
+            setTimeout(() => {
+                if (videoRefs[2].current) videoRefs[2].current.pause();
+                setActiveVideo(4);
+            }, 6500),
+            setTimeout(() => {
+                if (videoRefs[3].current) videoRefs[3].current.pause();
+                setFadingOut(true);
+            }, 8000),
+            setTimeout(() => {
+                setLoading(false);
+            }, 12000)   
         ];
 
         return () => {
-            clearTimeout(fadeInTimeout); // Limpiar temporizadores al desmontar el componente
+            clearTimeout(fadeInTimeout);
             intervals.forEach(clearTimeout);
         };
     }, []);
@@ -46,24 +53,28 @@ function Agency(){
                     <video
                         className={`splash-video ${activeVideo >= 1 ? 'active' : ''}`}
                         autoPlay loop muted
+                        ref={videoRefs[0]}
                     >
                         <source src={splash1} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
                         autoPlay loop muted
+                        ref={videoRefs[1]}
                     >
                         <source src={splash3} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
                         autoPlay loop muted
+                        ref={videoRefs[2]}
                     >
                         <source src={splash2} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
                         autoPlay loop muted
+                        ref={videoRefs[3]}
                     >
                         <source src={splash4} type="video/mp4" />
                     </video>
@@ -72,15 +83,7 @@ function Agency(){
         );
     }
 
-    return (
-        <div>
-            <h1>Agencia de modelaje</h1>
-            <img src={birdImage} alt="bird" />
-            <h2>adios andrea</h2> 
-        </div>
-    );   
+    return <PrincipalAgency />;
 }
 
-
-
-export default Agency
+export default Agency;
