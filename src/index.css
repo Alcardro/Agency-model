@@ -1,0 +1,49 @@
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000; /* Fondo negro */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 1.5s ease-in-out; /* Efecto de desvanecimiento */
+}
+
+/* La clase para el fade-out cuando el splash se va */
+.splash-screen.fade-out {
+  opacity: 0; /* Se desvanecerá a 0 */
+}
+
+/* La clase para el fade-in al inicio */
+.splash-screen.fade-in {
+  opacity: 1; /* Al inicio, se desvanecerá a 1 */
+}
+
+/* Video container */
+.video-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.splash-video {
+  width: 24%;
+  opacity: 0; /* Todos los videos empiezan invisibles */
+  transform: scale(0);
+  transition: opacity 4s ease-in, transform 0.5s ease-in-out;
+}
+
+.splash-video.active {
+  opacity: 1; /* Solo los videos activos se mostrarán */
+  transform: scale(1); /* Escalar los videos activos */
+}
