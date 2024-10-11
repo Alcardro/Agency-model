@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import birdImage from './assets/bird.avif';
 
 
 
@@ -69,11 +70,11 @@ function Agency(){
 
     return (
         <div>
-          <h1>Agencia de modelaje</h1>
-          <img src={import.meta.env.BASE_URL + "assets/bird.avif"} alt="" /> 
-          <h2>adios andrea</h2> 
+            <h1>Agencia de modelaje</h1>
+            <img src={birdImage} alt="bird" />
+            <h2>adios andrea</h2> 
         </div>
-      );
+    );   
 }
 
 
