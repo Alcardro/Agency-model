@@ -22,9 +22,9 @@ function Agency(){
 
         const intervals = [
             setTimeout(() => setActiveVideo(1), 0),    // El primer video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(2), 0),   // El segundo video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(3), 0),   // El tercer video aparece después de 0 segundos
-            setTimeout(() => setActiveVideo(4), 0),   // El cuarto video aparece después de 0 segundos
+            setTimeout(() => setActiveVideo(2), 2000),   // El segundo video aparece después de 0 segundos
+            setTimeout(() => setActiveVideo(3), 4000),   // El tercer video aparece después de 0 segundos
+            setTimeout(() => setActiveVideo(4), 6000),   // El cuarto video aparece después de 0 segundos
             setTimeout(() => {
                 setFadingOut(true); // Inicia el desvanecimiento después de 7 segundos
             }, 8000),  
