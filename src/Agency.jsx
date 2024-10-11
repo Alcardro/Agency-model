@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import birdImage from './assets/bird.avif';
 import splash1 from './assets/splash1.mp4';
+import splash2 from './assets/splash2.mp4';
+import splash3 from './assets/splash3.mp4';
+import splash4 from './assets/splash4.mp4';
 
 
 
@@ -50,19 +53,19 @@ function Agency(){
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="##" type="video/mp4" />
+                        <source src={splash3} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="##" type="video/mp4" />
+                        <source src={splash2} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="##" type="video/mp4" />
+                        <source src={splash4} type="video/mp4" />
                     </video>
                 </div>
             </div>
