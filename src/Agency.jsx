@@ -27,10 +27,10 @@ function Agency(){
             setTimeout(() => setActiveVideo(4), 0),   // El cuarto video aparece después de 0 segundos
             setTimeout(() => {
                 setFadingOut(true); // Inicia el desvanecimiento después de 7 segundos
-            }, 7000),  
+            }, 8000),  
             setTimeout(() => {
                 setLoading(false); // Después de 9 segundos, se oculta el splash screen
-            }, 9000)   
+            }, 10000)   
         ];
 
         return () => {
