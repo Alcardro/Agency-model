@@ -41,25 +41,25 @@ function Agency(){
                         className={`splash-video ${activeVideo >= 1 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/bird.avif" type="video/mp4" />
+                        <source src="./assets/bird.avif" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="./assets/logo-prueba.avif" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="./assets/logo-prueba.avif" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="./assets/logo-prueba.avif" type="video/mp4" />
                     </video>
                 </div>
             </div>
