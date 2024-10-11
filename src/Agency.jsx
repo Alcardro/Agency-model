@@ -41,25 +41,25 @@ function Agency(){
                         className={`splash-video ${activeVideo >= 1 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/bird.avif" type="video/mp4" />
+                        <source src="###" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="##" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="##" type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
                         autoPlay loop muted
                     >
-                        <source src="./src/assets/logo-prueba.avif" type="video/mp4" />
+                        <source src="##" type="video/mp4" />
                     </video>
                 </div>
             </div>
@@ -69,6 +69,7 @@ function Agency(){
     return (
         <div>
             <h1>Agencia de modelaje</h1>
+            <img src="./assets/bird.avif" alt="" />  
         </div>
     );
 }
