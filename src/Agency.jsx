@@ -22,7 +22,7 @@ function Agency() {
             setTimeout(() => {
                 if (videoRefs[0].current) videoRefs[0].current.pause();
                 setActiveVideo(2);
-            }, 2000),
+            }, 2500),
             setTimeout(() => {
                 if (videoRefs[1].current) videoRefs[1].current.pause();
                 setActiveVideo(3);
@@ -34,10 +34,10 @@ function Agency() {
             setTimeout(() => {
                 if (videoRefs[3].current) videoRefs[3].current.pause();
                 setFadingOut(true);
-            }, 7500),
+            }, 8500),
             setTimeout(() => {
                 setLoading(false);
-            }, 10000)   
+            }, 12000)   
         ];
 
         return () => {
