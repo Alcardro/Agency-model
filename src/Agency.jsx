@@ -22,22 +22,22 @@ function Agency() {
             setTimeout(() => {
                 if (videoRefs[0].current) videoRefs[0].current.pause();
                 setActiveVideo(2);
-            }, 2000),
+            }, 2500),
             setTimeout(() => {
                 if (videoRefs[1].current) videoRefs[1].current.pause();
                 setActiveVideo(3);
-            }, 4000),
+            }, 5000),
             setTimeout(() => {
                 if (videoRefs[2].current) videoRefs[2].current.pause();
                 setActiveVideo(4);
-            }, 6500),
+            }, 7500),
             setTimeout(() => {
                 if (videoRefs[3].current) videoRefs[3].current.pause();
                 setFadingOut(true);
             }, 8000),
             setTimeout(() => {
                 setLoading(false);
-            }, 12000)   
+            }, 10000)   
         ];
 
         return () => {
@@ -62,14 +62,14 @@ function Agency() {
                         autoPlay loop muted
                         ref={videoRefs[1]}
                     >
-                        <source src={splash3} type="video/mp4" />
+                        <source src={splash2} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
                         autoPlay loop muted
                         ref={videoRefs[2]}
                     >
-                        <source src={splash2} type="video/mp4" />
+                        <source src={splash3} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
