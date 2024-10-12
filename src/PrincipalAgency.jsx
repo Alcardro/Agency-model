@@ -2,6 +2,7 @@
 
 import Portrait from './assets/portrait.mp4';
 import React from 'react';
+import Agency from './Agency';
 
 
 function PrincipalAgency() {
@@ -11,11 +12,11 @@ function PrincipalAgency() {
     return (
         <div className="headerPortrait">
 
-            <video className="background-video" src={Portrait} autoPlay loop muted />
+            <video className="background-video" src={Portrait} preload="metadata" autoPlay loop muted />
 
             <nav className="navbar">
                 <ul>
-                    <li><a href="/">Inicio</a></li>
+                    <li><a href={<Agency></Agency>}>Inicio</a></li>
                     <li><a href="/about">Sobre Nosotros</a></li>
                     <li><a href="/services">Servicios</a></li>
                     <li><a href="/contact">Contacto</a></li>

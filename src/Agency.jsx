@@ -52,6 +52,7 @@ function Agency() {
                 <div className="video-container">
                     <video
                         className={`splash-video ${activeVideo >= 1 ? 'active' : ''}`}
+                        preload="metadata"
                         autoPlay loop muted
                         ref={videoRefs[0]}
                     >
@@ -59,6 +60,7 @@ function Agency() {
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
+                        preload="metadata"
                         autoPlay loop muted
                         ref={videoRefs[1]}
                     >
@@ -66,6 +68,7 @@ function Agency() {
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 3 ? 'active' : ''}`}
+                        preload="metadata"
                         autoPlay loop muted
                         ref={videoRefs[2]}
                     >
@@ -73,6 +76,7 @@ function Agency() {
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
+                        preload="metadata"
                         autoPlay loop muted
                         ref={videoRefs[3]}
                     >
