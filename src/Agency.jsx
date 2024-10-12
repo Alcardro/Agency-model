@@ -37,7 +37,7 @@ function Agency() {
             }, 8500),
             setTimeout(() => {
                 setLoading(false);
-            }, 12000)   
+            }, 11000)   
         ];
 
         return () => {
