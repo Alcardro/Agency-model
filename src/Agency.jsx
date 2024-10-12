@@ -22,7 +22,7 @@ function Agency() {
             setTimeout(() => {
                 if (videoRefs[0].current) videoRefs[0].current.pause();
                 setActiveVideo(2);
-            }, 2600),
+            }, 2000),
             setTimeout(() => {
                 if (videoRefs[1].current) videoRefs[1].current.pause();
                 setActiveVideo(3);
