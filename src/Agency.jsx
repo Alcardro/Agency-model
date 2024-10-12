@@ -30,7 +30,7 @@ function Agency() {
             setTimeout(() => {
                 if (videoRefs[2].current) videoRefs[2].current.pause();
                 setActiveVideo(4);
-            }, 5500),
+            }, 6500),
             setTimeout(() => {
                 if (videoRefs[3].current) videoRefs[3].current.pause();
                 setFadingOut(true);
