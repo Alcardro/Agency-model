@@ -11,7 +11,6 @@ function Agency() {
     const [fadingOut, setFadingOut] = useState(false);
     const [activeVideo, setActiveVideo] = useState(0);
     const videoRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
- 
 
     useEffect(() => {
         const fadeInTimeout = setTimeout(() => {
@@ -38,7 +37,7 @@ function Agency() {
             }, 8500),
             setTimeout(() => {
                 setLoading(false);
-            }, 12000)
+            }, 12000)   
         ];
 
         return () => {
@@ -46,8 +45,6 @@ function Agency() {
             intervals.forEach(clearTimeout);
         };
     }, []);
-
-    
 
     if (loading) {
         return (
@@ -90,3 +87,4 @@ function Agency() {
 }
 
 export default Agency;
+       
