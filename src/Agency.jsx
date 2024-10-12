@@ -55,7 +55,7 @@ function Agency() {
                         autoPlay loop muted
                         ref={videoRefs[0]}
                     >
-                        <source src={splash1} type="video/mp4" />
+                        <source src={splash3} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 2 ? 'active' : ''}`}
@@ -69,14 +69,14 @@ function Agency() {
                         autoPlay loop muted
                         ref={videoRefs[2]}
                     >
-                        <source src={splash3} type="video/mp4" />
+                        <source src={splash4} type="video/mp4" />
                     </video>
                     <video
                         className={`splash-video ${activeVideo >= 4 ? 'active' : ''}`}
                         autoPlay loop muted
                         ref={videoRefs[3]}
                     >
-                        <source src={splash4} type="video/mp4" />
+                        <source src={splash1} type="video/mp4" />
                     </video>
                 </div>
             </div>
