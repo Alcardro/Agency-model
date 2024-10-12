@@ -11,7 +11,7 @@ function Agency() {
     const [fadingOut, setFadingOut] = useState(false);
     const [activeVideo, setActiveVideo] = useState(0);
     const videoRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
-    const videos = [splash1, splash2, splash3, splash4];
+ 
 
     useEffect(() => {
         const fadeInTimeout = setTimeout(() => {
