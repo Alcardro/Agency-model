@@ -2,11 +2,11 @@
 
 import Portrait from './assets/portrait.mp4';
 import React from 'react';
-import Agency from './Agency';
+
+import {Link } from "react-router-dom";
 
 
 function PrincipalAgency() {
-
 
 
     return (
@@ -16,11 +16,21 @@ function PrincipalAgency() {
 
             <nav className="navbar">
                 <ul>
-                    <li><a href={<Agency></Agency>}>Inicio</a></li>
-                    <li><a href="/about">Sobre Nosotros</a></li>
-                    <li><a href="/services">Servicios</a></li>
-                    <li><a href="/contact">Contacto</a></li>
+                    
+                    <li>
+                        <Link to={"/"}>Inicio</Link>
+                    </li>
+                    <li>
+                        <Link to={"/about"}>Sobre Nosotros</Link>
+                    </li>
+                    <li>
+                        <Link to={"/servicios"}>Servicios</Link>
+                    </li>
+                    <li>
+                        <Link to={"/contacto"}>Contacto</Link>
+                    </li>
                 </ul>
+                    
             </nav>
             <header className="hero">
                 <h1>Bienvenido a Nuestra Agencia de Modelaje</h1>
@@ -28,6 +38,8 @@ function PrincipalAgency() {
                 <button className="cta-button">Explorar Más</button>
             </header>
         </div>
+
+        
     );
 
 

@@ -127,3 +127,13 @@
 .cta-button:hover {
   background-color: rgba(0, 0, 0, 0.918);
 }
+
+/*----------------------------------------------------------------*/
+
+
+
+.aboutHeader,.serviceHeader,.contactHeader{
+
+  height: 5vh; /* Asegurarse de que ocupe toda la altura de la ventana */
+  
+}
