@@ -9,7 +9,7 @@ import Contact from './Contact.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/agency-model">
       <Routes> {/* Envuelve las rutas dentro de <Routes> */}
         <Route path="*" element={<App />} /> {/* Define las rutas correctamente */}
         <Route path="/about" element={<About />}/>
